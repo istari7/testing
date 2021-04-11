@@ -1,7 +1,26 @@
 <html>
 
 <head>
+    <script>
+// Since the transactionID is different, it means same person is placing another order
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push(
+    {'event':'formSubmit',
+    'firstName':"user_fname",
+    'lastName':"user_lname",
+    'emailAddress':"user_email",
+    'country':"user_country",
+    'city':"user_city"}
+    ,
+    {'event':'purchase'
+    ,'ecommerce':
+        {'purchase':
+            {'actionField':
+                {'id':"12345",},
+            'products':[{'id':"12345",}]}}});
 
+
+    </script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -23,7 +42,7 @@
 </head>
 
 <body>
-    <a href="thank-you/products/powerx-optimizer-software.html"> Click Here to go to Thank-you Page</a>
+    <button >Click me</button>
 <!-- onclick="myFunction()"-->
     <script>
         function myFunction() {
