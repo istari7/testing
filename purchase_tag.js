@@ -10,18 +10,18 @@ if(window.localStorage.getItem("transID")){
     // Since the transactionID is different, it means same person is placing another order
     dataLayer.push({
     event:'purchase',
-    't_id': '{{Order ID}}',
+    't_id': dataLayer[1].ecommerce.purchase.actionField.id,
     'ecommerce': {
       'purchase': {
         'actionField': {
-          'id': '{{Order ID}}',
-          'revenue': '{{purchase_product_revenue}}',
+          'id': dataLayer[1].ecommerce.purchase.actionField.id,
+          'revenue': {{pxo_price}},
           'coupon': ''
         },
         'products': [{                            
-          'name': '{{purchase_product_name}}',     
-          'id': '{{purchase_product_name}}',
-          'price': '{{purchase_product_revenue}}',
+          'name': {{pxo_purchase_checker}},     
+          'id': dataLayer[1].ecommerce.purchase.actionField.id,
+          'price': {{pxo_price}},
           'quantity': 1,
           'coupon': ''                            
          }]}}});
@@ -45,13 +45,13 @@ dataLayer.push({
       'purchase': {
         'actionField': {
           'id': '{{Order ID}}',
-          'revenue': '{{purchase_product_revenue}}',
+          'revenue': '{{pxo_price}}',
           'coupon': ''
         },
         'products': [{                            
           'name': '{{purchase_product_name}}',     
           'id': '{{purchase_product_name}}',
-          'price': '{{purchase_product_revenue}}',
+          'price': '{{pxo_price}}',
           'quantity': 1,
           'coupon': ''                            
          }]}}});
