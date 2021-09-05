@@ -68,11 +68,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="site-content">
 	<!-- Home Jumbotron
     ================================================== -->
+	<script>
+function btnclick(){
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		"event":"download_click",
+		"some_value":"XYZ"
+	});
+}
+</script>
 	<section class="intro">
 	<div class="wrapintro">
 		<h1>Affiliates Bootstrap Template</h1>
 		<h2 class="lead">"Affiliates" is a free Bootstrap Template designed & developed by WowThemesNet, best suitable for affiliate marketers.</h2>
-		<a target="_blank" href="https://gum.co/affiliates-html-template" class="btn">Download</a>
+		<a target="_blank"class="btn" onclick=btnclick()>Download</a>
 	</div>
 	</section>
 	<!-- Container
